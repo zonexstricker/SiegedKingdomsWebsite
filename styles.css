@@ -15,7 +15,24 @@ body {
     overflow: hidden;
     /* Prevent horizontal scrollbars */
 }
-
+.rule ol {
+    list-style: none;
+    counter-reset: item;
+  }
+  .rule li {
+    counter-increment: item;
+    margin-bottom: 20px;
+  }
+  .rule li:before {
+    margin-right: 10px;
+    content: counter(item);
+    background: rgb(26, 26, 26);
+    border-radius: 100%;
+    color: white;
+    width: 1.2em;
+    text-align: center;
+    display: inline-block;
+  }
 /* The sidebar menu */
 .sidebar {
     height: 100%;
