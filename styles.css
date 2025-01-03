@@ -1,0 +1,90 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* Ensure the sidebar and content align side-by-side */
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Prevent horizontal scrollbars */
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background: rgba(46, 53, 61, 0.8); /* Semi-transparent dark background */
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: sticky; /* Keeps the sidebar in place during scrolling */
+    top: 0;
+    overflow-y: auto; /* Allow scrolling in the sidebar if content overflows */
+    flex-shrink: 0; /* Prevents the sidebar from shrinking */
+}
+
+/* Main content styles */
+.main-content {
+    flex: 1; /* Main content takes the remaining space */
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px; /* Limit the width of the content */
+    background: rgba(89, 88, 88, 0.918); /* Semi-transparent grey background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Allow scrolling for the content if needed */
+}
+
+.main-content section {
+    margin-bottom: 40px;
+}
+
+.main-content h2 {
+    font-size: 28px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    line-height: 1.6;
+}
+
+/* Ensure the layout behaves well on smaller screens */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column; /* Stack the sidebar and content vertically */
+        overflow: auto; /* Allow scrolling */
+    }
+    .sidebar {
+        width: 100%;
+        height: auto; /* Let the sidebar adjust height */
+    }
+    .main-content {
+        margin-top: 20px;
+        max-width: 100%; /* Allow content to use full width */
+    }
+}
+
+.two-columns {
+    display: flex;
+    justify-content: space-between; /* Add space between columns */
+    gap: 20px; /* Add spacing between the two columns */
+}
+
+.two-columns .left,
+.two-columns .right {
+    flex: 1; /* Ensure equal width for the columns */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0; /* Add spacing between list items */
+}
