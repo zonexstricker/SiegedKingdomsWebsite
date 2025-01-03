@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Bitter", serif;
     font-size: 20px;
     margin: 0;
     padding: 0;
@@ -13,6 +13,31 @@ body {
     /* Full height of the viewport */
     overflow: hidden;
     /* Prevent horizontal scrollbars */
+}
+
+h2{
+    font-family: "Noto Sans Anatolian Hieroglyphs", serif;
+  font-weight: 500;
+  font-style: medium;
+  font-size: 40px;
+}
+
+h3{
+    font-family: "Noto Sans Anatolian Hieroglyphs", serif;
+    font-weight: 400;
+    font-style: regular;  
+}
+
+h4{
+    font-family: "Noto Sans Anatolian Hieroglyphs", serif;
+    font-weight: 400;
+    font-style: regular;  
+}
+
+.rule{
+    background-color: #111111b9;
+    border-radius: 25px;
+    padding: 10px;
 }
 
 .rule ol {
@@ -33,6 +58,11 @@ body {
     text-align: center;
     display: inline-block;
   }
+
+  .incident {
+    text-align: center;
+  }
+
 /* The sidebar menu */
 .sidebar {
     height: 100%;
@@ -81,7 +111,9 @@ body {
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #111;
+    background: rgba(39, 39, 39, 0.742);
+    border-radius: 10px;
+    box-shadow: 0 4px 40px rgba(255, 255, 255, 0.665);
     color: white;
     padding: 10px 15px;
     border: none;
@@ -137,7 +169,6 @@ body {
 }
 
 .main-content h2 {
-    font-size: 28px;
     text-align: center;
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
     padding-bottom: 5px;
@@ -189,3 +220,4 @@ ul li {
 #glossary li{
     margin-bottom: 20px;
 }
+
