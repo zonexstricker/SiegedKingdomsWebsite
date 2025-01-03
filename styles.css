@@ -83,6 +83,18 @@ body {
     padding: 20px;
 }
 
+.minor{
+    color:#fbf987
+}
+
+.moderate{
+    color: #faba82;
+}
+
+.severe{
+    color: #fb7c7c;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidebar {
