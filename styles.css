@@ -15,6 +15,12 @@ body {
     /* Prevent horizontal scrollbars */
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 h2{
     font-family: "Noto Sans Anatolian Hieroglyphs", serif;
   font-weight: 500;
@@ -233,4 +239,21 @@ th {
 }
 tr:hover {
     background-color: #171717;
+}
+
+.highlight {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+.popup {
+    position: absolute;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    max-width: 300px;
+    color:#111
 }
