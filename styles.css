@@ -16,6 +16,7 @@ body {
 }
 
 .center {
+    text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -256,4 +257,15 @@ tr:hover {
     z-index: 1000;
     max-width: 300px;
     color:#111
+}
+
+.monospace-text{
+    text-align: center;
+    font-family: "Source Code Pro", serif;
+    background-color: #111;
+    border-radius: 10px ;
+}
+
+.compact-table th, td{
+    padding: 0px;
 }
