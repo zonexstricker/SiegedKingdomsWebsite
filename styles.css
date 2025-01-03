@@ -1,40 +1,113 @@
 /* General styles */
 body {
     font-family: Arial, sans-serif;
+    font-size: 22px;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: row; /* Ensure the sidebar and content align side-by-side */
+    flex-direction: row;
+    /* Ensure the sidebar and content align side-by-side */
     background: url('background.png') no-repeat center center fixed;
     background-size: cover;
     color: white;
-    height: 100vh; /* Full height of the viewport */
-    overflow: hidden; /* Prevent horizontal scrollbars */
+    height: 100vh;
+    /* Full height of the viewport */
+    overflow: hidden;
+    /* Prevent horizontal scrollbars */
 }
 
-/* Sidebar styles */
+/* The sidebar menu */
 .sidebar {
-    width: 250px;
-    background: rgba(46, 53, 61, 0.8); /* Semi-transparent dark background */
-    color: white;
-    padding: 20px;
-    height: 100vh;
-    position: sticky; /* Keeps the sidebar in place during scrolling */
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
     top: 0;
-    overflow-y: auto; /* Allow scrolling in the sidebar if content overflows */
-    flex-shrink: 0; /* Prevents the sidebar from shrinking */
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    /* If you want a transition effect */
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
 }
 
 /* Main content styles */
 .main-content {
-    flex: 1; /* Main content takes the remaining space */
+    flex: 1;
+    /* Main content takes the remaining space */
     margin: 0 auto;
     padding: 20px;
-    max-width: 800px; /* Limit the width of the content */
-    background: rgba(89, 88, 88, 0.918); /* Semi-transparent grey background */
+    max-width: 1000px;
+    /* Limit the width of the content */
+    background: rgba(89, 88, 88, 0.918);
+    /* Semi-transparent grey background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow-y: auto; /* Allow scrolling for the content if needed */
+    overflow-y: auto;
+    /* Allow scrolling for the content if needed */
 }
 
 .main-content section {
@@ -55,36 +128,47 @@ body {
 /* Ensure the layout behaves well on smaller screens */
 @media screen and (max-width: 768px) {
     body {
-        flex-direction: column; /* Stack the sidebar and content vertically */
-        overflow: auto; /* Allow scrolling */
+        flex-direction: column;
+        /* Stack the sidebar and content vertically */
+        overflow: auto;
+        /* Allow scrolling */
     }
+
     .sidebar {
         width: 100%;
-        height: auto; /* Let the sidebar adjust height */
+        height: auto;
+        /* Let the sidebar adjust height */
     }
+
     .main-content {
         margin-top: 20px;
-        max-width: 100%; /* Allow content to use full width */
+        max-width: 100%;
+        /* Allow content to use full width */
     }
 }
 
 .two-columns {
     display: flex;
-    justify-content: space-between; /* Add space between columns */
-    gap: 20px; /* Add spacing between the two columns */
+    justify-content: space-between;
+    /* Add space between columns */
+    gap: 20px;
+    /* Add spacing between the two columns */
 }
 
 .two-columns .left,
 .two-columns .right {
-    flex: 1; /* Ensure equal width for the columns */
+    flex: 1;
+    /* Ensure equal width for the columns */
 }
 
 ul {
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none;
+    /* Remove bullet points */
     margin: 0;
     padding: 0;
 }
 
 ul li {
-    margin: 5px 0; /* Add spacing between list items */
+    margin: 5px 0;
+    /* Add spacing between list items */
 }
