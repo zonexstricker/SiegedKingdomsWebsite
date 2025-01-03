@@ -242,8 +242,8 @@ tr:hover {
 }
 
 .highlight {
-    cursor: pointer;
-    color: blue;
+    cursor: help;
+    color: rgb(255, 136, 136);
     text-decoration: underline;
 }
 .popup {
