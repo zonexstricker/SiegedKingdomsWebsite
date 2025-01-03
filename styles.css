@@ -15,6 +15,7 @@ body {
     overflow: hidden;
     /* Prevent horizontal scrollbars */
 }
+
 .rule ol {
     list-style: none;
     counter-reset: item;
@@ -145,9 +146,14 @@ body {
 
 .main-content h2 {
     font-size: 28px;
+    text-align: center;
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
     padding-bottom: 5px;
     margin-bottom: 10px;
+}
+
+.main-content h3{
+    text-align: center;
 }
 
 .main-content p {
@@ -177,10 +183,9 @@ body {
 }
 
 .two-columns {
+    text-align: center;
     display: flex;
     justify-content: space-between;
-    /* Add space between columns */
-    gap: 20px;
     /* Add spacing between the two columns */
 }
 
@@ -200,4 +205,8 @@ ul {
 ul li {
     margin: 5px 0;
     /* Add spacing between list items */
+}
+
+#glossary li{
+    margin-bottom: 20px;
 }
