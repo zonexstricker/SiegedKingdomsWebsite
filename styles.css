@@ -79,6 +79,7 @@ h4 {
 
 .rule li {
     counter-increment: item;
+    margin-right: 10px;
     margin-bottom: 20px;
 }
 
