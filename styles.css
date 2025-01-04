@@ -19,64 +19,70 @@ a:link {
     color: rgb(126, 249, 255);
     background-color: transparent;
     text-decoration: none;
-  }
-  a:visited {
+}
+
+a:visited {
     color: rgb(93, 183, 187);
     background-color: transparent;
     text-decoration: none;
-  }
-  a:hover {
+}
+
+a:hover {
     color: rgb(93, 189, 194);
     background-color: transparent;
     text-decoration: underline;
-  }
-  a:active {
+}
+
+a:active {
     color: rgb(93, 189, 194);
     background-color: transparent;
     text-decoration: underline;
-  }
+}
 
 .center {
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-
-h2{
-    font-family: "Noto Sans Anatolian Hieroglyphs", serif;
-  font-weight: 500;
-  font-style: medium;
-  font-size: 40px;
 }
 
-h3{
+h2 {
     font-family: "Noto Sans Anatolian Hieroglyphs", serif;
-    font-weight: 400;
-    font-style: regular;  
+    font-weight: 500;
+    font-style: medium;
+    font-size: 40px;
 }
 
-h4{
+h3 {
     font-family: "Noto Sans Anatolian Hieroglyphs", serif;
     font-weight: 400;
-    font-style: regular;  
+    font-style: regular;
 }
 
-.rule{
+h4 {
+    font-family: "Noto Sans Anatolian Hieroglyphs", serif;
+    font-weight: 400;
+    font-style: regular;
+}
+
+.rule {
     background-color: #111111b9;
     border-radius: 25px;
     padding: 10px;
+    overflow-y: auto;
 }
 
 .rule ol {
     list-style: none;
     counter-reset: item;
-  }
-  .rule li {
+}
+
+.rule li {
     counter-increment: item;
     margin-bottom: 20px;
-  }
-  .rule li:before {
+}
+
+.rule li:before {
     margin-right: 10px;
     content: counter(item);
     background: rgb(26, 26, 26);
@@ -85,11 +91,11 @@ h4{
     width: 1.2em;
     text-align: center;
     display: inline-block;
-  }
+}
 
-  .incident {
+.incident {
     text-align: center;
-  }
+}
 
 /* The sidebar menu */
 .sidebar {
@@ -157,15 +163,15 @@ h4{
     padding: 20px;
 }
 
-.minor{
-    color:#fbf987
+.minor {
+    color: #fbf987
 }
 
-.moderate{
+.moderate {
     color: #faba82;
 }
 
-.severe{
+.severe {
     color: #fb7c7c;
 }
 
@@ -203,7 +209,7 @@ h4{
     margin-bottom: 10px;
 }
 
-.main-content h3{
+.main-content h3 {
     text-align: center;
 }
 
@@ -222,6 +228,12 @@ h4{
         margin-top: 20px;
         max-width: 100%;
     }
+
+    .rule li{
+        padding: 0px;
+        margin: 0px;
+    }
+
 }
 
 .two-columns {
@@ -250,15 +262,19 @@ table {
     border-collapse: collapse;
     margin-top: 20px;
 }
-th, td {
+
+th,
+td {
     border: 1px solid #ffffff;
     padding: 10px;
     text-align: left;
 }
+
 th {
     background-color: #1f1f1f;
     font-weight: bold;
 }
+
 tr:hover {
     background-color: #171717;
 }
@@ -268,6 +284,7 @@ tr:hover {
     color: rgb(255, 136, 136);
     text-decoration: underline;
 }
+
 .popup {
     position: absolute;
     background: #f9f9f9;
@@ -277,13 +294,12 @@ tr:hover {
     display: none;
     z-index: 1000;
     max-width: 300px;
-    color:#111
+    color: #111
 }
 
-.monospace-text{
+.monospace-text {
     text-align: center;
     font-family: "Source Code Pro", serif;
     background-color: #111;
-    border-radius: 10px ;
+    border-radius: 10px;
 }
-
