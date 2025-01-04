@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: "Bitter", serif;
     font-size: 20px;
@@ -5,66 +6,54 @@ body {
     padding: 0;
     display: flex;
     flex-direction: row;
-    /* Ensure the sidebar and content align side-by-side */
     background: url('background.png') no-repeat center center fixed;
     background-size: cover;
     color: white;
     height: 100vh;
-    /* Full height of the viewport */
     overflow: hidden;
-    /* Prevent horizontal scrollbars */
+}
+
+/* Links */
+a {
+    background-color: transparent;
+    text-decoration: none;
 }
 
 a:link {
     color: rgb(126, 249, 255);
-    background-color: transparent;
-    text-decoration: none;
 }
 
 a:visited {
     color: rgb(93, 183, 187);
-    background-color: transparent;
-    text-decoration: none;
 }
 
-a:hover {
+a:hover, a:active {
     color: rgb(93, 189, 194);
-    background-color: transparent;
     text-decoration: underline;
 }
 
-a:active {
-    color: rgb(93, 189, 194);
-    background-color: transparent;
-    text-decoration: underline;
-}
-
+/* Text Alignments */
 .center {
     text-align: center;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+}
+
+/* Headings */
+h2, h3, h4 {
+    font-family: "Noto Sans Anatolian Hieroglyphs", serif;
 }
 
 h2 {
-    font-family: "Noto Sans Anatolian Hieroglyphs", serif;
     font-weight: 500;
-    font-style: medium;
     font-size: 40px;
 }
 
-h3 {
-    font-family: "Noto Sans Anatolian Hieroglyphs", serif;
+h3, h4 {
     font-weight: 400;
-    font-style: regular;
 }
 
-h4 {
-    font-family: "Noto Sans Anatolian Hieroglyphs", serif;
-    font-weight: 400;
-    font-style: regular;
-}
-
+/* Rule Section */
 .rule {
     background-color: #111111b9;
     border-radius: 25px;
@@ -79,13 +68,12 @@ h4 {
 
 .rule li {
     counter-increment: item;
-    margin-right: 10px;
-    margin-bottom: 20px;
+    margin: 0 10px 20px;
 }
 
 .rule li:before {
-    margin-right: 10px;
     content: counter(item);
+    margin-right: 10px;
     background: rgb(26, 26, 26);
     border-radius: 100%;
     color: white;
@@ -93,35 +81,27 @@ h4 {
     display: inline-block;
 }
 
+/* Incident Section */
 .incident {
     text-align: center;
 }
 
-/* The sidebar menu */
+/* Sidebar */
 .sidebar {
     height: 100%;
-    /* 100% Full-height */
     width: 0;
-    /* 0 width - change this with JavaScript */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Stay on top */
     top: 0;
     left: 0;
     background-color: #111;
-    /* Black*/
     overflow-x: hidden;
-    /* Disable horizontal scroll */
     padding-top: 60px;
-    /* Place content 60px from the top */
     transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidebar */
 }
 
 .sidebar a {
-    padding: 8px 8px 8px 20px;
-    text-decoration: none;
+    padding: 8px 20px;
     font-size: 20px;
     color: #818181;
     display: block;
@@ -132,7 +112,6 @@ h4 {
     color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
 .sidebar .closebtn {
     position: absolute;
     top: 0;
@@ -141,7 +120,7 @@ h4 {
     margin-left: 50px;
 }
 
-/* The button used to open the sidebar */
+/* Open Button */
 .openbtn {
     font-size: 20px;
     cursor: pointer;
@@ -157,33 +136,10 @@ h4 {
     background-color: #444;
 }
 
+/* Main Content */
 #main {
-    transition: margin-left .5s;
-    /* If you want a transition effect */
+    transition: margin-left 0.5s;
     padding: 20px;
-}
-
-.minor {
-    color: #fbf987
-}
-
-.moderate {
-    color: #faba82;
-}
-
-.severe {
-    color: #fb7c7c;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidebar {
-        padding-top: 15px;
-    }
-
-    .sidebar a {
-        font-size: 18px;
-    }
 }
 
 .main-content {
@@ -217,21 +173,7 @@ h4 {
     line-height: 1.6;
 }
 
-/* Ensure the layout behaves well on smaller screens */
-@media screen and (max-width: 768px) {
-    body {
-        flex-direction: column;
-        overflow: auto;
-    }
-
-    .main-content {
-        margin-top: 20px;
-        max-width: 100%;
-        padding: 0px;
-    }
-
-}
-
+/* Two Columns Layout */
 .two-columns {
     text-align: center;
     display: flex;
@@ -243,6 +185,7 @@ h4 {
     flex: 1;
 }
 
+/* Lists */
 ul {
     list-style-type: none;
     margin: 0;
@@ -253,14 +196,14 @@ ul li {
     margin: 5px 0;
 }
 
+/* Tables */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-th,
-td {
+th, td {
     border: 1px solid #ffffff;
     padding: 10px;
     text-align: left;
@@ -275,6 +218,7 @@ tr:hover {
     background-color: #171717;
 }
 
+/* Highlights */
 .highlight {
     cursor: help;
     color: rgb(255, 136, 136);
@@ -290,13 +234,51 @@ tr:hover {
     display: none;
     z-index: 1000;
     max-width: 300px;
-    color: #111
+    color: #111;
 }
 
+/* Monospace Text */
 .monospace-text {
     text-align: center;
     font-family: "Source Code Pro", serif;
     background-color: #111;
     border-radius: 10px;
     overflow-y: auto;
+}
+
+/* Severity Levels */
+.minor {
+    color: #fbf987;
+}
+
+.moderate {
+    color: #faba82;
+}
+
+.severe {
+    color: #fb7c7c;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    .main-content {
+        margin-top: 20px;
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
 }
