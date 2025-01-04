@@ -287,6 +287,10 @@ tr:hover {
     border-radius: 10px ;
 }
 
+.compact-table{
+    overflow-y: auto;
+}
+
 .compact-table th, td{
     padding: 0px;
 }
