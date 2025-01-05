@@ -1,1 +1,1 @@
-click the link under the title to go to the most recent deployment
+development moved to https://github.com/SiegedKingdoms/SiegedKingdoms for a better github pages link :p
